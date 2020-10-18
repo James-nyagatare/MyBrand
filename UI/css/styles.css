@@ -186,6 +186,7 @@ img {
 .greet:nth-child(3) {
   font-weight: 100;
   font-size: 1.4rem;
+  padding: 0 1.5rem 0 0;
 }
 .center {
   margin-top: 2rem;
