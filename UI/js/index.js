@@ -1,34 +1,35 @@
 //mobile navigation bar
-const mobileNav =()=>{
-    const burger= document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li')
+const mobileNav = () => {
+  const burger = document.querySelector(".burger");
+  const sideNav = document.querySelector(".side-nav");
+  const navLinks = document.querySelectorAll(".side-links li");
 
-    burger.addEventListener('click',()=>{
-        //Toggle Nav
-        nav.classList.toggle('nav-active');
+  const refreshAnims = (param) => {
+    param.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 1s ease forwards ${index / 6}s`;
+      }
+    });
+  };
+  burger.addEventListener("click", () => {
+    //Toggle Nav
+    sideNav.classList.toggle("nav-active");
+    refreshAnims(navLinks);
 
-        navLinks.forEach((link,index)=>{
-            if (link.style.animation) {
-                link.style.animation='';
-              } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index/7 + 0.3}s`
-              } 
-        })
-      
-        //Toggle burger
-        burger.classList.toggle('toggle');
-    })
-     //remove burger by clicking each single link
-     navLinks.forEach((link)=>{
-      link.addEventListener('click',()=>{
-          nav.classList.toggle('nav-active')
-          //Toggle burger
-        burger.classList.toggle('toggle');
-      })
-   
-   })
-    
-}
+    //Toggle burger
+    burger.classList.toggle("toggle");
+  });
+  //remove burger by clicking each single link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      sideNav.classList.toggle("nav-active");
+     refreshAnims(navLinks)
+      //Toggle burger
+      burger.classList.toggle("toggle");
+    });
+  });
+};
 
 mobileNav();
