@@ -151,7 +151,7 @@ nav {
 }
 /* landing page  */
 #landing-page {
-  padding: 6.4rem 0;
+  padding: 10% 0;
   background-color: var(--bg-main);
   display: grid;
   grid-gap: 0;
