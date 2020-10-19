@@ -159,12 +159,14 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(calc(500px / 2), 1fr));
 }
 .left {
+  margin-top: 6rem;
   height: 80%;
 }
 img {
   width: 100%;
 }
 .right {
+  margin-top: 6rem;
   height: 80%;
 }
 #greets {
@@ -211,25 +213,7 @@ img {
     font-size: 1.2rem;
   }
 }
-@media screen and (max-width: 1080px) {
-  .greet:nth-child(1) {
-    font-weight: 150;
-    font-size: 1.9rem;
-  }
-  .greet:nth-child(2) {
-    font-weight: 150;
-    font-size: 1.4rem;
-  }
-  .greet:nth-child(3) {
-    font-weight: 100;
-    font-size: 1.1rem;
-  }
-}
 @media screen and (max-width: 768px) {
-  .right {
-    height: 30%;
-    margin-top: -20rem;
-  }
   #greets {
     text-align: center;
   }
@@ -248,6 +232,15 @@ img {
   }
   .center a {
     font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 498px) {
+  .left {
+    margin-top: -2rem;
+  }
+  .right {
+    height: 85%;
+    margin-top: -5rem;
   }
 }
 @media screen and (max-width: 320px) {
