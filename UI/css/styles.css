@@ -151,6 +151,7 @@ nav {
 }
 /* landing page  */
 #landing-page {
+  padding: 6.4rem 0;
   background-color: var(--bg-main);
   display: grid;
   grid-gap: 0;
@@ -159,14 +160,14 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(calc(500px / 2), 1fr));
 }
 .left {
-  margin-top: 6rem;
+  /* padding: 7rem 0; */
   height: 80%;
 }
 img {
   width: 100%;
 }
 .right {
-  margin-top: 6rem;
+  /* padding: 7rem 0; */
   height: 80%;
 }
 #greets {
@@ -214,6 +215,14 @@ img {
   }
 }
 @media screen and (max-width: 768px) {
+  .left {
+    padding: 1.2rem 0;
+    height: 80%;
+  }
+  .right {
+    padding: 1.2rem 0;
+    height: 80%;
+  }
   #greets {
     text-align: center;
   }
@@ -235,24 +244,32 @@ img {
   }
 }
 @media screen and (max-width: 498px) {
+  #landing-page {
+    padding: 0;
+  }
   .left {
-    margin-top: -2rem;
+    margin-top: -5rem 0;
+    height: 80%;
   }
   .right {
-    height: 85%;
-    margin-top: -5rem;
+    margin-top: -2.5rem 0;
+    height: 80%;
   }
 }
 @media screen and (max-width: 320px) {
   body {
     overflow-x: hidden;
   }
+  #landing-page {
+    padding: 0;
+  }
   .left {
-    height: 90%;
+    margin-top: -2.5rem 0;
+    height: 80%;
   }
   .right {
-    height: 85%;
-    margin-top: -20rem;
+    margin-top: -1.5rem 0;
+    height: 80%;
   }
   #greets {
     text-align: center;
