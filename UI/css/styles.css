@@ -695,13 +695,148 @@ img {
   font-size: 1.4rem;
   padding-bottom: 2rem;
 }
+.all-blogs{
+  width:100%;
+  padding: 2rem 0.5rem;
+  background-color: var(--bg-main);
+  text-align: center;  
+}
+.blogs-image{
+  max-width: 50%;
+  margin: auto;
+  padding: 2rem;
+}
+.all-blogs img{
+  width: 100%;
+}
+.clamp-text {
+  max-width: 1000px;
+  margin: auto;
+  max-height:200px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 
+}
+.padding{
+  padding: 1rem 1rem 2rem 1rem;
+  
+}
+.all-blogs hr{
+  width: 70%;
+  margin-left: 15%;
+}
+.single-blog{
+  background-color: var(--bg-main);
+  padding: 2rem .5rem;
+}
+.single-blog>.all-blogs{
+  min-height:fit-content;
+}
+.lower-blog{
+  max-width: 1000px;
+  margin: auto;
+  padding: .2rem;
+}
+.lower-blog h2{
+  text-align: center;
+  padding-bottom:1.5rem ;
+}
+.like-comment{
+  letter-spacing: .8rem;
+  margin: 2% 5%;
+  display:flex;
+  justify-content: space-between;
+}
+.lower-blog hr{
+width:95%;
+margin-left: 3%;
+}
+.like-comment > [button] {
+  padding: .5rem 1rem !important;
+}
+.comment{
+  margin: 4% auto;
+  padding: 1.2rem;
+  width:60%;
+  box-shadow: -3px -3px 30px#c4c4c4;
+  border-radius: 1.2rem;
+}
+.profile-date{
+  width:100%;
+  display:flex;
+}
+.profile-pic{
+  width:10%;  
+}
+.profile-pic img{
+  width:100%;
+}
+.cmnt {
+  font-size: 1.5rem;
+  font-weight: 20;
+  padding: 1.5%;
+}
+.comment-section{
+  width: 60%;
+  margin:auto;
+}
+.comment-textarea{
+  padding-bottom: 1.5rem;
+  border-radius: .5rem;
+}
+.comment-textarea textarea{
+  width: 100%;
+  border: 1px solid var(--light-blue);
+  border-radius: .4rem;
+  padding: 0.5rem;
+  background: none;
+  font-size: 1.2rem;
+  resize: none;
+}
+.comment-button{
+  text-align: center;
+}
+.comment-button button{
+  background: none;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 1034px) {
+  .comment-section{
+    width:80%;
+  }
+  .clamp-text{
+    padding: 0 1.3rem;
+  }
+  .blog-image{
+    max-width: 70%;
+    padding:1rem;
+  }
+  .profile-name{
+    padding: 2.5%;
+  }
+  .profile-pic{
+    width:20%;  
+  }
+  .comment{
+    width:80%;
+  }
+}
 @media screen and (max-width: 880px) {
+ 
+  .lower-blog{
+    padding: 0 7%;
+  }
   .blogs-container {
     width: 90%;
   }
 }
 @media screen and (max-width: 795px) {
+  .comment-button button{
+    font-size: .9rem;
+  }
   .blogs-container {
     display: grid;
     grid-gap: 1rem;
@@ -709,6 +844,20 @@ img {
   }
 }
 @media screen and (max-width: 480px) {
+  .comment-section{
+    width:90%;
+  }
+  .blog-image{
+    max-width: 90%;
+    padding:0rem;
+  }
+  .comment{
+    font-size: .5rem;
+    width:90%;
+  }
+  .cmnt p{
+    font-size: .9rem;
+  }
   .blog-title {
     font-size: 1rem !important;
   }
