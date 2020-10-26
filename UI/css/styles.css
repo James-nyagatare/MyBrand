@@ -677,6 +677,9 @@ img {
   width: 100%;
   padding-bottom: 1rem;
 }
+.blog-image{
+  width: 100%;
+}
 .blog-image img {
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -847,8 +850,11 @@ margin-left: 3%;
   .comment-section{
     width:90%;
   }
+  .blogs-image{
+    max-width: 95%;
+  }
   .blog-image{
-    max-width: 90%;
+    max-width: 100%;
     padding:0rem;
   }
   .comment{
