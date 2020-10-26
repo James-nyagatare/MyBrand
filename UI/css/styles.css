@@ -677,6 +677,9 @@ img {
   width: 100%;
   padding-bottom: 1rem;
 }
+.blog-image{
+  width: 100%;
+}
 .blog-image img {
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -847,8 +850,11 @@ margin-left: 3%;
   .comment-section{
     width:90%;
   }
+  .blogs-image{
+    max-width: 95%;
+  }
   .blog-image{
-    max-width: 90%;
+    max-width: 100%;
     padding:0rem;
   }
   .comment{
@@ -1052,3 +1058,57 @@ footer {
     font-size: 1rem;
   }
 }
+
+/* admin-panel */
+#login-page {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.login-container {
+  width:90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  box-shadow: -3px -3px 30px #c4c4c4;
+}
+.user-login{
+  width: 100%;
+  background-color: var(--dark-blue);
+  color:white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.user-icon{
+  font-size: 4rem;
+}
+.user-login-icons{
+  width:60%;
+  margin:1.6rem auto;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+}
+.admin-login{
+  padding: 3%;
+}
+.login-form{
+  width: 100%;
+}
+.login-form input{
+  width: 90%;
+  font-size: 1.1rem;
+  border: none;
+  background: none;
+  border-bottom: 1px solid black;
+  margin: 1.5rem 0;
+  outline: none;
+}
+.login-button{
+  text-align: center;
+}
+.login-form button{
+  font-size: 1.1rem;
+  padding:.5rem 3.5rem;
+  background: none;
+  margin: 1rem 0;
+} 
