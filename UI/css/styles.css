@@ -29,6 +29,7 @@ a {
   transition: color 0.5s, background-color 0.5s;
 }
 [button]:hover {
+  cursor: pointer;
   background-color: var(--dark-blue);
   box-shadow: 0 0 3px var(--dark-blue);
   color: var(--font-color);
@@ -1300,5 +1301,16 @@ footer {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+/* create-blog */
+.upper-create{
+  background-color: var(--bg-main);
+  height:46vh;
+  max-width: 100%;
+}
+.lower-create{
+  background-color: var(--dark-blue);
+  height: 46vh;
+  max-width: 100%;
 }
 }
