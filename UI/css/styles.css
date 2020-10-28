@@ -1465,3 +1465,15 @@ footer {
     overflow-y: scroll;
   }
 }
+/* edit-blog */
+.edit-delete{
+max-width: 1000px;
+margin: auto;
+display: flex;
+justify-content: space-around;
+margin-top:-2.3rem ;
+padding-bottom: 1rem;
+}
+.edit-delete span{
+  padding:.5rem 1.5rem;
+}
