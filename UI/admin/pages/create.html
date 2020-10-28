@@ -8,9 +8,10 @@
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
     <title>My panel</title>
 </head>
-<body>
+<body id="credi">
     <!-- navigation bar -->
    <nav>
     <div class="logo">
@@ -70,9 +71,43 @@
 </ul>
 </div>
 <!-- create-blog -->
-<div class="upper-create"></div>
-<div class="lower-create"></div>
+<div class="upper-create">
+    <h1>Create New Blog Post</h1>
+</div>
+<div class="lower-create">
+    <div class="crediblo">
+        <div class="create-form">
+            <form>
+                <div class="input-field create-field" >
+                    <h4>Title:</h4>
+                    <input type="text"  placeholder="Blog title" />
+                </div>
+
+                <div class="input-field create-field" >
+                    <h4>Body:</h4>
+                    <textarea name="body" id="" rows="3" placeholder="Type Blog Body"></textarea>
+
+                </div>
+
+                <div class="input-field create-field">
+                    <h4>Image:</h4>
+                    <input type="file"  placeholder="" class="gray" accept="image/x-png,image/x-jpeg" />
+                </div>
+
+                 <div class="cblog-btn" >
+                     <button button>Create Blog</button>
+                 </div>
+            </form>
+        </div>
+    </div>
+</div>
 <script src="../../js/index.js"></script>
+<script>
+    
+    CKEDITOR.replace( 'body');
+    CKEDITOR.config.height = 60;
+    CKEDITOR.config.resize_enabled = false; 
+</script>
 </body>
 </html>
 
