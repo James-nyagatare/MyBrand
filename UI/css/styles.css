@@ -1492,3 +1492,13 @@ padding-bottom: 1rem;
     height: .2rem;
   }
 }
+.profile-picture{
+  /* height:1vh; */
+  /* margin-bottom: 2rem; */
+  max-width: 1000px;
+  text-align: center;
+}
+.profile-picture img{
+  border-radius: 12px;
+  width: 35%;
+}
