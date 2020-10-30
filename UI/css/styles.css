@@ -29,6 +29,7 @@ a {
   transition: color 0.5s, background-color 0.5s;
 }
 [button]:hover {
+  cursor: pointer;
   background-color: var(--dark-blue);
   box-shadow: 0 0 3px var(--dark-blue);
   color: var(--font-color);
@@ -915,6 +916,7 @@ margin-left: 3%;
   width: 35%;
   background: none;
   font-size: 1.2rem;
+  outline: none;
 }
 .input-field textarea {
   border: 1px solid var(--light-blue);
@@ -923,6 +925,7 @@ margin-left: 3%;
   background: none;
   font-size: 1.2rem;
   resize: none;
+  outline: none;
 }
 .send-button button {
   font-size: 1.2rem;
@@ -1301,4 +1304,164 @@ footer {
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+}
+/* create-blog */
+.upper-create{
+  height:46vh;
+  max-width: 100%;
+  text-align: center;
+}
+.upper-create h1{
+  padding-top:5%;
+}
+.lower-create{
+  background-color: var(--dark-blue);
+  height: 46vh;
+  max-width: 100%;
+}
+.crediblo{
+  width: 80%;
+  margin: auto;
+  box-shadow: -3px -3px 30px var(--gray);
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  top: -60%;
+}
+#credi{
+  overflow-y: hidden;
+}
+.create-form{
+  margin:1% 3%;
+  padding: 1%;
+}
+.create-field input{
+  border: 1px solid #adacac;
+  width: 100%;
+  font-size: 1rem;
+}
+.create-field textarea {
+  border: 1px solid #adacac;
+  width: 100%;
+  font-size: 1rem;
+}
+.cblog-btn button{
+  font-size: .9rem;
+  padding: .5rem 2.5rem;
+  margin: 1rem 40%;
+  background: none;
+}
+.gray{
+  color: var(--gray);
+}
+@media screen and (max-width: 1126px) {
+  .cblog-btn button{
+    padding: .5rem 2.5rem;
+    margin: 1rem 35%;
+    
+  }
+}
+@media screen and (max-width: 1024px) {
+  .crediblo{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 776px) {
+  .upper-create h1{
+    padding-top:6%;
+    font-size: 1.5rem;
+  }
+  .crediblo{
+    width: 90%;
+    top: -50%;
+  }
+  create-field input{
+    font-size: .8rem;
+    height: 1.5rem;
+  }
+  .create-field textarea {
+    font-size: .8rem;
+  }
+  .cblog-btn button{
+    font-size: .7rem;
+    padding: .5rem 2rem;
+    margin: 1rem 35%;
+  }
+  .create-field h4{
+    font-size: .8rem;
+  }
+}
+@media screen and (max-width: 682px) {
+  .crediblo{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 528px) {
+  .cblog-btn button{
+    padding: .5rem 1.5rem;
+   
+  }
+}
+@media screen and (max-width: 465px) {
+  .upper-create h1{
+    padding-top:3%;
+    font-size: 1.5rem;
+  }
+  .crediblo{
+    width: 95%;
+  }
+  .cblog-btn button{
+    padding: .5rem .7rem;
+   
+  }
+}
+@media screen and (max-width: 414px) {
+  .upper-create h1{
+    padding-top:3%;
+    font-size: 1.5rem;
+  }
+  .crediblo{
+    top:-75%;
+}
+}
+@media screen and (max-width: 375px) {
+  .upper-create h1{
+    padding-top:8%;
+    
+  }
+  .crediblo{
+    width: 97%;
+    top:-70%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .upper-create h1{
+    padding-top:2%;
+  }
+  .crediblo{
+    top:-80%;
+  }
+  .create-form{
+    margin:.5% 1.4%;
+    padding: .7%;
+  }
+  
+  create-field input{
+    font-size: .5rem;
+    height: 1.3rem;
+  }
+  .create-field h4{
+    font-size: .6rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .cblog-btn button{
+    padding: .5rem .7rem;
+    width: 40%;
+    margin: 1rem 30%;
+   
+  }
+  #credi{
+    overflow-y: scroll;
+  }
 }
