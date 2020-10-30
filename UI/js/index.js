@@ -31,6 +31,7 @@ const mobileNav = () => {
     });
   });
 };
+
 const editProfile =()=>{
   const profile = document.querySelector(".admin-pic");
   const sideEdit = document.querySelector(".edit-dp");
@@ -38,5 +39,6 @@ const editProfile =()=>{
     sideEdit.classList.toggle("edit-active");
   })
 }
-editProfile();
 mobileNav();
+editProfile();
+
