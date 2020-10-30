@@ -1433,6 +1433,10 @@ footer {
     width: 97%;
     top:-70%;
   }
+  .login-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 @media screen and (max-width: 360px) {
   .upper-create h1{
@@ -1455,6 +1459,11 @@ footer {
   }
 }
 @media screen and (max-width: 320px) {
+  .login-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
+  }
   .cblog-btn button{
     padding: .5rem .7rem;
     width: 40%;
