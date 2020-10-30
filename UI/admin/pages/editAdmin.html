@@ -9,7 +9,7 @@
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
-    <title>My panel</title>
+    <title>Edit profile</title>
 </head>
 <body id="credi">
     <!-- navigation bar -->
@@ -50,7 +50,7 @@
          <a href="./create.html">Create</a>
      </li>
      <li>
-         <a href="../admin/index.html">Queries</a>
+         <a href="./queries.html">Queries</a>
      </li>
      <li>
         <a href="./editAdmin.html">Edit profile</a>
@@ -72,40 +72,34 @@
 </div>
 <!-- create-blog -->
 <div class="upper-create">
-    <h1>Edit Blog Post</h1>
+    <h1>Edit Profile</h1>
 </div>
 <div class="lower-create">
     <div class="crediblo">
+        
         <div class="create-form">
+            
             <form>
-                <div class="input-field create-field" >
-                    <h4>Title:</h4>
-                    <input type="text" class="title-edit" placeholder="Blog title" />
+                <div class="profile-picture">
+                    <img src="../../images/blog.jpg" alt="">
                 </div>
-
-                <div class="input-field create-field" >
-                    <h4>Body:</h4>
-                    <textarea name="body" class="content-edit" id="" rows="3" placeholder="Type Blog Body"></textarea>
-
-                </div>
-
                 <div class="input-field create-field">
-                    <h4>Image:</h4>
+                    <h4>Edit Image:</h4>
                     <input type="file"  placeholder="" class="gray" accept="image/x-png,image/x-jpeg" />
                 </div>
-
+                <div class="input-field create-field" >
+                    <h4>Profile name:</h4>
+                    <input type="text"  placeholder="Edit profile name" />
+                </div>
                  <div class="cblog-btn" >
-                     <button button>Edit Blog</button>
+                     <button button>Edit profile</button>
                  </div>
             </form>
         </div>
     </div>
 </div>
 <script src="../../js/index.js"></script>
-<script>
-    
-    CKEDITOR.replace( 'body');
-    CKEDITOR.config.height = 60;
-    CKEDITOR.config.resize_enabled = false; 
-</script>
+
 </body>
+</html>
+

@@ -1477,3 +1477,28 @@ padding-bottom: 1rem;
 .edit-delete span{
   padding:.5rem 1.5rem;
 }
+#queries{
+  min-height: 70vh;
+}
+
+@media screen and (max-width: 1024px) {
+  #queries{
+    min-height: 77vh;
+  }
+  #queries-header{
+    font-size: 2rem;
+  }
+  #queries-hr{
+    height: .2rem;
+  }
+}
+.profile-picture{
+  /* height:1vh; */
+  /* margin-bottom: 2rem; */
+  max-width: 1000px;
+  text-align: center;
+}
+.profile-picture img{
+  border-radius: 12px;
+  width: 35%;
+}
