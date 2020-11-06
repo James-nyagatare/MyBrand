@@ -107,7 +107,7 @@
     <div class="admin-view">
         <div class="admin-left">
             <i class="fa fa-envelope"></i>
-            <p>7</p>
+            <p class="queries"></p>
         </div>
         <div class="admin-right">
             <p class="admin-blue">Queries</p>
@@ -277,6 +277,16 @@
     </div>
    
 </footer>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="../../js/firebaseInit.js"></script>
+<script>
+    const queriesNum = document.querySelector('.queries');
+    db.collection('querries').onSnapshot((docs)=>{
+        let queriesCount = docs.size;
+        queriesNum.innerHTML = queriesCount;
+    })
+</script>
 <script src="../../js/index.js"></script>
 </body>
 </html>

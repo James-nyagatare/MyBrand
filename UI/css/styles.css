@@ -17,6 +17,7 @@ body {
   --bg-secondary: #e5e5e5;
   --font-color: rgb(241, 239, 239);
   --admin-blue:#A7B9F4;
+  --error-color: #e74c3c;
 }
 a {
   text-decoration: none;
@@ -918,6 +919,20 @@ margin-left: 3%;
   font-size: 1.2rem;
   outline: none;
 }
+ .input-field h6{
+   font-size: .8rem;
+   color: var(--error-color);
+   visibility: hidden;
+ }
+  .error input {
+   border-color: var(--error-color);
+ }
+ .error > textarea{
+  border-color:var(--error-color)  !important;
+}
+.error h6{
+   visibility: visible;
+ }
 .input-field textarea {
   border: 1px solid var(--light-blue);
   padding: 0.5rem;
