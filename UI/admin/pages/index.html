@@ -280,13 +280,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
 <script src="../../js/firebaseInit.js"></script>
-<script>
-    const queriesNum = document.querySelector('.queries');
-    db.collection('querries').onSnapshot((docs)=>{
-        let queriesCount = docs.size;
-        queriesNum.innerHTML = queriesCount;
-    })
-</script>
+<script src="../../js/firestore/queriesCounter.js"></script>
 <script src="../../js/index.js"></script>
 </body>
 </html>

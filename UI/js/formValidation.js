@@ -23,7 +23,7 @@ const checkLength =(input,min)=>{
 }
     //a function to validate an email
  const checkEmail = (input)=>{
-      const emailRegex =/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+      const emailRegex =/[a-z0-9._%+-]+@[a-z.-]+\.[a-z]{2,}$/;
       const email = String(input.value).toLowerCase();
       const isValidEmail = emailRegex.test(email);
       if(!isValidEmail) {
