@@ -1,5 +1,3 @@
-
-
 //a function to display an error
 const showError=(input,message)=>{
     const inputController = input.parentElement;
@@ -11,8 +9,17 @@ const removeError =(input)=>{
     const inputController = input.parentElement;
     inputController.classList ='input-field'
 }
+//a function that checks the user filled the required inputs fields
+const checkRequired=(input)=>{
+        if(input.value.trim()===''){
+            showError(input,`${input.id} is required`);
+        }else{
+            removeError(input);
+            return true;
+        }
+}
 
-   //a function that checks the length of entered input fields.
+ //a function that checks the length of entered input fields.
 const checkLength =(input,min)=>{
     if(input.value.trim().length < min){
         showError(input,`${input.id} should be atleast ${min} characters`);

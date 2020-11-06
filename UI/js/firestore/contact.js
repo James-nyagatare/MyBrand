@@ -5,7 +5,8 @@ const contactForm = document.querySelector('#form-contact');
        //contact form validation and storing
        contactForm.addEventListener('submit',(e)=>{
               e.preventDefault();
-             if(checkLength(name,3) && checkEmail(contactEmail)&& checkLength(message,10)){
+             if((checkRequired(name)|| checkRequired(contactEmail) || checkRequired(message)) 
+             && checkLength(name,3) && checkEmail(contactEmail)&& checkLength(message,10)){
                   db.collection('querries').add({
                        name: name.value,
                        email: contactEmail.value,
