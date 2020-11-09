@@ -349,20 +349,23 @@
             </div>
     
             <div class="form">
-                <form>
+                <form id="form-contact">
                     <div class="input-field">
                         <h2>Name:</h2>
-                        <input type="text"  placeholder="Your full name" />
+                        <input type="text" id="name" name="name" placeholder="Your full name" />
+                        <h6>Error message</h6>
                     </div>
     
                     <div class="input-field">
                         <h2>email:</h2>
-                        <input type="text"  placeholder="Your email" />
+                        <input type="text" id="email" name="contactemail" placeholder="Your email" />
+                        <h6>Error message</h6>
                     </div>
     
                     <div class="input-field">
                         <h2>message:</h2>
-                        <textarea name="" id="" rows="5" placeholder="Your Message"></textarea>
+                        <textarea name="message" id="message" rows="5" placeholder="Your Message"></textarea>
+                        <h6>Error message</h6>
                     </div>
     
                      <div class="send-button" >
@@ -385,7 +388,11 @@
                </div>
               
            </footer>
-   
+   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+   <script src="./js/firebaseInit.js"></script>
+   <script src="./js/formValidation.js"></script>
+   <script src="./js/firestore/contact.js"></script>
    <script src="./js/index.js"></script>
    <script src="./js/slides.js"></script>
 </body>
