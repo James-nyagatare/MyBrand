@@ -714,6 +714,9 @@ img {
 .all-blogs img{
   width: 100%;
 }
+.more-blogs{
+  min-height: 80vh;
+}
 .clamp-text {
   max-width: 1000px;
   margin: auto;
@@ -736,6 +739,7 @@ img {
 .single-blog{
   background-color: var(--bg-main);
   padding: 2rem .5rem;
+  min-height: 69vh;
 }
 .single-blog>.all-blogs{
   min-height:fit-content;
@@ -801,6 +805,13 @@ margin-left: 3%;
 .comment-textarea{
   padding-bottom: 1.5rem;
   border-radius: .5rem;
+}
+.input-field .comment-content{
+  width: 100%;
+  padding: 1rem;
+}
+.comment-textarea h6{
+  visibility: hidden;
 }
 .comment-textarea textarea{
   width: 100%;
@@ -1354,6 +1365,9 @@ footer {
   border: 1px solid #adacac;
   width: 100%;
   font-size: 1rem;
+}
+#create-form  input{
+  width: 100%;
 }
 .create-field textarea {
   border: 1px solid #adacac;
