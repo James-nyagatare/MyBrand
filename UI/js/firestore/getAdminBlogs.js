@@ -4,9 +4,6 @@ db.collection('blogs').orderBy('time','desc').onSnapshot((docs)=>{
     docs.forEach((doc)=>{
         blog = doc.data();
         blog.id = doc.id;
-        // totalViews += blog.views;
-        // totalComments += blog.commentsCount;
-        // totalLikes += blog.likes;
         html += `<a href="../../pages/blog.html?id=${blog.id}" class="blog">
         <div class="blog-top">
             <div class="blog-image">

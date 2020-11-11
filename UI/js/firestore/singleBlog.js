@@ -32,7 +32,7 @@ db.collection('blogs').doc(blogId).onSnapshot((doc) => {
 
 singleBlog.innerHTML = html;
 })
-db.collection('blogs').doc(blogId).collection('comments').onSnapshot((docs)=>{
+db.collection('blogs').doc(blogId).collection('comments').orderBy('time','desc').onSnapshot((docs)=>{
     let html = '';
     docs.forEach((doc)=>{
         const comment = doc.data();
