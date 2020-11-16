@@ -17,22 +17,33 @@
                 <div class="user-icon"><i class="fa fa-user"></i></div>
                 <p>Want to stay updated, get started now</p>
                 <div class="user-login-icons">
-                    <a href="../pages/blogs.html"><i class="fa fa-google"></i></a>
-                    <a href="../pages/blogs.html"><i class="fa fa-github"></i></a>
-                    <a href="../pages/blogs.html"><i class="fa fa-facebook-f"></i></a>
+                    <i class="fa fa-google" onclick="authLogin('google')"></i>
+                    <i class="fa fa-github" onclick="authLogin('github')"></i>
+                    <a href="../pages/blogs.html"><i class="fa fa-facebook-f" onclick="authLogin('facebook')"></i></a>
                 </div>
             </div>
             <div class="admin-login">
                 <div class="login-form">
-                    <form action="">
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="password">
-                    <div class="login-button"><button button><a href="./pages/index.html">Login</a></button></div>
+                    <form action="" id="login-form">
+                    <div class="login-field" >   
+                    <input type="text" name ="email" placeholder="Email">
+                    <h6>Error message</h6>
+                    </div>
+                    <div class="login-field" > 
+                    <input type="password" name="password" placeholder="password">
+                    <h6>Error message</h6>
+                    </div>
+                    <div class="login-button"><button button>Login</button></div>
                     </form>
                 </div>
                 
             </div>
         </div>
-
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="../js/firebaseInit.js"></script>
+        <script src="../js/formValidation.js"></script>
+        <script src="../js/firestore/loginAuth.js"></script>
 </body>
 </html>

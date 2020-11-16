@@ -29,7 +29,7 @@
      </li>
      <li>
         <div class="admin-pic">
-            <img src="../../images/blog.jpg" alt="">
+            <img src="../../images/blank-avatar.png" alt="">
         </div> 
      </li>
     </ul>
@@ -55,8 +55,8 @@
      <li>
         <a href="./editAdmin.html">Edit profile</a>
     </li>
-    <li>
-        <a href="">Logout</a>
+    <li >
+        <a href="" class="logout">Logout</a>
     </li>
  </ul>
 </div>
@@ -66,7 +66,7 @@
         <a href="./editAdmin.html">Edit</a>
     </li>
     <li>
-        <a href="">Logout</a>
+        <a href="" class="logout">Logout</a>
     </li>
 </ul>
 </div>
@@ -105,9 +105,12 @@
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
 <script src="../../js/firebaseInit.js"></script>
 <script src="../../js/formValidation.js"></script>
 <script src="../../js/firestore/updateBlog.js"></script>
+<script src="../../js/firestore/logout.js"></script>
+<script src="../../js//firestore/profile.js"></script>
 <script>
     
     CKEDITOR.replace( 'body');

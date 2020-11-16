@@ -16,15 +16,29 @@
        <div class="logo">
            <h4>James</h4>
        </div>
-       <ul class="nav-links">
-           <li>
+       <ul class="nav-links" >
+           <li class="client-links">
                <a href="../index.html">Portfolio</a>
            </li>
-           <li>
+           <li class="client-links">
                <a href="../pages/blogs.html">Blogs</a>
            </li>
-           <li>
-            <a href="../admin/index.html">Login</a>
+           <li class="client-links">
+            <a href="../admin/">Login</a>
+        </li>
+        <li class="admin-links">
+            <a href="../admin/pages/index.html">Dashboard</a>
+        </li>
+        <li class="admin-links">
+            <a href="../admin/pages/create.html">Create</a>
+        </li>
+        <li class="admin-links">
+            <a href="../admin/pages/queries.html">Queries</a>
+        </li>
+        <li class="admin-links">
+           <div class="admin-pic">
+               <img src="../images/blank-avatar.png" alt="">
+           </div> 
         </li>
        </ul>
        <div class="burger">
@@ -36,17 +50,43 @@
 
    <div class="side-nav">
     <ul class="side-links">
-        <li>
+        <li class="pclient-links">
             <a href="../index.html">Portfolio</a>
         </li>
-        <li>
+        <li class="pclient-links">
             <a href="../pages/blogs.html">Blogs</a>
         </li>
-        <li>
-            <a href="../admin/index.html">Login</a>
-        </li>
+        <li class="pclient-links">
+         <a href="../admin/">Login</a>
+       </li>
+       <li class="padmin-links">
+         <a href="../admin/pages/index.html">Dashboard</a>
+       </li>
+       <li class="padmin-links">
+         <a href="../admin/pages/create.html">Create</a>
+       </li>
+       <li class="padmin-links">
+         <a href="../admin/pages/queries.html">Queries</a>
+       </li>
+       <li class="padmin-links">
+        <a href="../admin/pages/editAdmin.html">Edit profile</a>
+      </li>
+      <li class="padmin-links">
+        <a href="" class="logout">Logout</a>
+      </li>
     </ul>
    </div>
+
+   <div class ="edit-dp">
+    <ul class="side-edit">
+        <li>
+            <a href="../admin/pages/editAdmin.html">Edit</a>
+        </li>
+        <li>
+            <a href="" class="logout">Logout</a>
+        </li>
+    </ul>
+    </div>
    
    <!-- blog -->
    <section class="single-blog">
@@ -62,7 +102,6 @@
                    <textarea name="" id="" rows="5"class="comment-content" placeholder="Leave a comment"></textarea>
                    <h6>Error message</h6>
                </div>
-       
                 <div class="comment-button">
                     <button button>Comment now</button>
                 </div>
@@ -88,11 +127,15 @@
    
    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
    <script src="../js/firebaseInit.js"></script>
    <script src="../js/formValidation.js"></script>
-   <script src="../js/firestore/singleBlog.js"></script>
    <script src="../js/firestore/updateViews.js"></script>
+   <script src="../js/firestore/logout.js"></script>
+   <script src="../js/firestore/singleBlog.js"></script>
+   <script src="../js/firestore/hideAdminCred.js"></script>
+   <script src="../js/firestore/profile.js"></script>
    <script src="../js/index.js"></script>
 </body>
 </html>

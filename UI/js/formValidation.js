@@ -41,4 +41,20 @@ const checkLength =(input,min)=>{
       }
        
 } 
+// a function to validate a password
+const checkPassword = (input) =>{
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,12})/
+    const isValidPassword = passwordRegex.test(input.value);
+    if(!isValidPassword){
+        showError(input,'Password is not valid');
+    }else{
+        removeError(input);
+        return true;
+    }
+}
+
+// a redirecting function
+function redirectTo(path) {
+    return (location.href =  `/UI${path}`);
+  }
 

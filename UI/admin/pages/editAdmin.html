@@ -29,7 +29,7 @@
      </li>
      <li>
         <div class="admin-pic">
-            <img src="../../images/blog.jpg" alt="">
+            <img src="../../images/blank-avatar.png" alt="">
         </div> 
      </li>
     </ul>
@@ -56,7 +56,7 @@
         <a href="./editAdmin.html">Edit profile</a>
     </li>
     <li>
-        <a href="">Logout</a>
+        <a href="" class="logout">Logout</a>
     </li>
  </ul>
 </div>
@@ -66,7 +66,7 @@
         <a href="./editAdmin.html">Edit</a>
     </li>
     <li>
-        <a href="">Logout</a>
+        <a href="" class="logout">Logout</a>
     </li>
 </ul>
 </div>
@@ -79,17 +79,17 @@
         
         <div class="create-form">
             
-            <form>
+            <form id="edit-profile">
                 <div class="profile-picture">
-                    <img src="../../images/blog.jpg" alt="">
+                    <img src="../../images/blank-avatar.png" alt="">
                 </div>
                 <div class="input-field create-field">
                     <h4>Edit Image:</h4>
-                    <input type="file"  placeholder="" class="gray" accept="image/x-png,image/x-jpeg" />
+                    <input type="file" class="ppicture" placeholder="" class="gray" accept="image/x-png,image/x-jpeg" />
                 </div>
                 <div class="input-field create-field" >
                     <h4>Profile name:</h4>
-                    <input type="text"  placeholder="Edit profile name" />
+                    <input type="text" class= "pname" placeholder="Edit profile name" />
                 </div>
                  <div class="cblog-btn" >
                      <button button>Edit profile</button>
@@ -98,6 +98,15 @@
         </div>
     </div>
 </div>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="../../js/firebaseInit.js"></script>
+<script src="../../js/formValidation.js"></script>
+<script src="../../js/firestore/logout.js"></script>
+<script src="../../js//firestore/profile.js"></script>
+<script src="../../js/firestore/editProfile.js"></script>
 <script src="../../js/index.js"></script>
 
 </body>
