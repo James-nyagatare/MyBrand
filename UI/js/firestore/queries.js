@@ -1,8 +1,8 @@
-const queryBox= document.querySelector(".query")
-    db.collection('querries').onSnapshot((docs)=>{
-       let enter = "";
-       docs.forEach((doc)=>{
-           enter+=`
+const queryBox = document.querySelector(".query");
+db.collection("querries").onSnapshot((docs) => {
+  let enter = "";
+  docs.forEach((doc) => {
+    enter += `
     <div class="comment">
     <div class="profile-date">
     <div class="profile-name">
@@ -13,7 +13,7 @@ const queryBox= document.querySelector(".query")
 <div class="cmnt">
     <p>${doc.data().message}</p> 
 </div>
-</div>`
-       })
-queryBox.innerHTML = enter;
-    })
+</div>`;
+  });
+  queryBox.innerHTML = enter;
+});
