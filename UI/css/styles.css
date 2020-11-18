@@ -16,7 +16,7 @@ body {
   --bg-main: #f8f8f8;
   --bg-secondary: #e5e5e5;
   --font-color: rgb(241, 239, 239);
-  --admin-blue:#A7B9F4;
+  --admin-blue: #a7b9f4;
   --error-color: #e74c3c;
 }
 a {
@@ -98,7 +98,8 @@ nav {
   list-style-type: none;
   z-index: 1;
 }
-.pclient-links , .padmin-links{
+.pclient-links,
+.padmin-links {
   display: none;
 }
 .side-links li {
@@ -681,7 +682,7 @@ img {
   width: 100%;
   padding-bottom: 1rem;
 }
-.blog-image{
+.blog-image {
   width: 100%;
 }
 .blog-image img {
@@ -702,162 +703,163 @@ img {
   font-size: 1.4rem;
   padding-bottom: 2rem;
 }
-.all-blogs{
-  width:100%;
+.all-blogs {
+  width: 100%;
   padding: 2rem 0.5rem;
   background-color: var(--bg-main);
-  text-align: center;  
+  text-align: center;
 }
-.blogs-image{
+.blogs-image {
   max-width: 50%;
   margin: auto;
   padding: 2rem;
 }
-.all-blogs img{
+.all-blogs img {
   width: 100%;
 }
-.more-blogs{
+.more-blogs {
   min-height: 80vh;
 }
 .clamp-text {
   max-width: 1000px;
   margin: auto;
-  max-height:200px;
+  max-height: 200px;
   overflow: hidden;
   display: -webkit-box;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-
 }
-.padding{
+.padding {
   padding: 1rem 1rem 2rem 1rem;
-  
 }
-.all-blogs hr{
+.all-blogs hr {
   width: 70%;
   margin-left: 15%;
 }
-.single-blog{
+.single-blog {
   background-color: var(--bg-main);
-  padding: 2rem .5rem;
+  padding: 2rem 0.5rem;
   min-height: 69vh;
 }
-.single-blog>.all-blogs{
-  min-height:fit-content;
+.single-blog > .all-blogs {
+  min-height: fit-content;
 }
-.lower-blog{
+.lower-blog {
   max-width: 1000px;
   margin: auto;
-  padding: .2rem;
+  padding: 0.2rem;
 }
-.lower-blog h2{
+.lower-blog h2 {
   text-align: center;
-  padding-bottom:1.5rem ;
+  padding-bottom: 1.5rem;
 }
-.like-comment{
-  letter-spacing: .8rem;
+.like-comment {
+  letter-spacing: 0.8rem;
   margin: 2% 5%;
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
-.like-comment span:hover{
+.like-comment span:hover {
   cursor: pointer;
 }
-.btn-delete{
+.btn-delete {
   font-size: 1rem;
 }
-.btn-delete:hover{
+.btn-delete:hover {
   color: crimson;
   background: none;
 }
-.lower-blog hr{
-width:95%;
-margin-left: 3%;
+.lower-blog hr {
+  width: 95%;
+  margin-left: 3%;
 }
 .like-comment > [button] {
-  padding: .5rem 1rem !important;
+  padding: 0.5rem 1rem !important;
 }
-.comment{
+.comment {
   margin: 4% auto;
   padding: 1.2rem;
-  width:60%;
+  width: 60%;
   box-shadow: -3px -3px 30px#c4c4c4;
   border-radius: 1.2rem;
 }
-.profile-date{
-  width:100%;
-  display:flex;
+.profile-date {
+  width: 100%;
+  display: flex;
 }
-.profile-pic{
-  width:9%; 
-  padding-right: .5rem;
+.profile-pic {
+  width: 9%;
+  padding-right: 0.5rem;
 }
-.profile-pic img{
+.profile-pic img {
   height: 100%;
   width: 100%;
-  border-radius: 80%; 
+  border-radius: 80%;
+}
+.logged-in,
+.logged-out {
+  display: none;
 }
 .cmnt {
   font-size: 1.5rem;
   font-weight: 20;
   padding: 1.5%;
 }
-.comment-section{
+.comment-section {
   width: 60%;
-  margin:auto;
+  margin: auto;
 }
-.comment-textarea{
+.comment-textarea {
   padding-bottom: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
-.input-field .comment-content{
+.input-field .comment-content {
   width: 100%;
   padding: 1rem;
 }
-.comment-textarea h6{
+.comment-textarea h6 {
   visibility: hidden;
 }
-.comment-textarea textarea{
+.comment-textarea textarea {
   width: 100%;
   border: 1px solid var(--light-blue);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   padding: 0.5rem;
   background: none;
   font-size: 1.2rem;
   resize: none;
 }
-.comment-button{
+.comment-button {
   text-align: center;
 }
-.comment-button button{
+.comment-button button {
   background: none;
   font-size: 1.2rem;
 }
 @media screen and (max-width: 1034px) {
-  .comment-section{
-    width:80%;
+  .comment-section {
+    width: 80%;
   }
-  .clamp-text{
+  .clamp-text {
     padding: 0 1.3rem;
   }
-  .blogs-image{
+  .blogs-image {
     max-width: 75%;
-    padding:1rem;
+    padding: 1rem;
   }
-  .profile-name{
+  .profile-name {
     padding: 2.5%;
   }
-  .profile-pic{
-    width:20%;  
+  .profile-pic {
+    width: 20%;
   }
-  .comment{
-    width:80%;
+  .comment {
+    width: 80%;
   }
 }
 @media screen and (max-width: 880px) {
- 
-  .lower-blog{
+  .lower-blog {
     padding: 0 7%;
   }
   .blogs-container {
@@ -865,8 +867,8 @@ margin-left: 3%;
   }
 }
 @media screen and (max-width: 795px) {
-  .comment-button button{
-    font-size: .9rem;
+  .comment-button button {
+    font-size: 0.9rem;
   }
   .blogs-container {
     display: grid;
@@ -875,22 +877,22 @@ margin-left: 3%;
   }
 }
 @media screen and (max-width: 480px) {
-  .comment-section{
-    width:90%;
+  .comment-section {
+    width: 90%;
   }
-  .blogs-image{
+  .blogs-image {
     max-width: 95%;
   }
-  .blog-image{
+  .blog-image {
     max-width: 100%;
-    padding:0rem;
+    padding: 0rem;
   }
-  .comment{
-    font-size: .5rem;
-    width:90%;
+  .comment {
+    font-size: 0.5rem;
+    width: 90%;
   }
-  .cmnt p{
-    font-size: .9rem;
+  .cmnt p {
+    font-size: 0.9rem;
   }
   .blog-title {
     font-size: 1rem !important;
@@ -935,20 +937,21 @@ margin-left: 3%;
   font-size: 1.2rem;
   outline: none;
 }
- .input-field h6, .login-field h6{
-   font-size: .8rem;
-   color: var(--error-color);
-   visibility: hidden;
- }
-  .error input {
-   border-color: var(--error-color);
- }
- .error > textarea{
-  border-color:var(--error-color)  !important;
+.input-field h6,
+.login-field h6 {
+  font-size: 0.8rem;
+  color: var(--error-color);
+  visibility: hidden;
 }
-.error h6{
-   visibility: visible;
- }
+.error input {
+  border-color: var(--error-color);
+}
+.error > textarea {
+  border-color: var(--error-color) !important;
+}
+.error h6 {
+  visibility: visible;
+}
 .input-field textarea {
   border: 1px solid var(--light-blue);
   padding: 0.5rem;
@@ -1110,35 +1113,38 @@ footer {
   height: 100vh;
 }
 .login-container {
-  width:90%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   box-shadow: -3px -3px 30px #c4c4c4;
 }
-.user-login{
+.user-login {
   width: 100%;
   background-color: var(--dark-blue);
-  color:white;
+  color: white;
   font-size: 1.5rem;
   text-align: center;
 }
-.user-icon{
+.user-icon {
   font-size: 4rem;
 }
-.user-login-icons{
-  width:60%;
-  margin:1.6rem auto;
+.user-login-icons {
+  width: 60%;
+  margin: 1.6rem auto;
   font-size: 1.6rem;
   display: flex;
   justify-content: space-around;
 }
-.admin-login{
+.user-login-icons i {
+  cursor: pointer;
+}
+.admin-login {
   padding: 3%;
 }
-.login-form{
+.login-form {
   width: 100%;
 }
-.login-form input{
+.login-form input {
   width: 90%;
   font-size: 1.1rem;
   border: none;
@@ -1147,35 +1153,35 @@ footer {
   margin: 1rem 0;
   outline: none;
 }
-.login-form .error input{
+.login-form .error input {
   border-bottom: 1px solid var(--error-color);
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
-.login-button{
+.login-button {
   text-align: center;
 }
-.login-button button:hover{
+.login-button button:hover {
   cursor: pointer;
 }
-.login-form button{
+.login-form button {
   font-size: 1.1rem;
-  padding:.5rem 3.5rem;
+  padding: 0.5rem 3.5rem;
   background: none;
   margin: 1rem 0;
-} 
-.admin-pic{
-  padding: .2rem;
+}
+.admin-pic {
+  padding: 0.2rem;
   cursor: pointer;
 }
-.admin-pic img{
+.admin-pic img {
   width: 25px;
-  height:25px;
+  height: 25px;
   border-radius: 50%;
 }
-#admin-links{
-  margin-top: .6rem;
+#admin-links {
+  margin-top: 0.6rem;
 }
-.edit-dp{
+.edit-dp {
   height: 15vh;
   background-color: var(--dark-blue);
   width: 20%;
@@ -1187,62 +1193,62 @@ footer {
   border-radius: 0 0 0 5px;
   z-index: 2;
 }
-#my-dashboard > .edit-dp{
-  box-shadow: -3px 3px 1px rgb(201, 208, 243); 
+#my-dashboard > .edit-dp {
+  box-shadow: -3px 3px 1px rgb(201, 208, 243);
 }
-.edit-active{
+.edit-active {
   display: block;
   animation: showSideEdit 0.7s;
 }
-.side-edit{
+.side-edit {
   list-style: none;
-  padding:  1rem 2rem;
+  padding: 1rem 2rem;
 }
-.side-edit li{
+.side-edit li {
   padding-top: 1rem;
 }
-#upper-dashboard{
+#upper-dashboard {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   margin: 4rem auto;
   padding: 0;
- max-width: 70%;
+  max-width: 70%;
   margin: 5% auto;
 }
-.admin-view{
+.admin-view {
   color: var(--bg-main);
   background-color: var(--dark-blue);
   border-radius: 8px;
   box-shadow: -3px -3px 30px#c4c4c4;
   display: flex;
 }
-.admin-left{
-  flex:.2;
+.admin-left {
+  flex: 0.2;
   border-right: 1px solid var(--font-color);
-  padding:2rem;
+  padding: 2rem;
 }
-.admin-right{
-  flex:2;
+.admin-right {
+  flex: 2;
   text-align: center;
   padding-top: 2rem;
 }
-.admin-left i{
+.admin-left i {
   font-size: 3rem;
 }
-.admin-left p{
+.admin-left p {
   font-size: 2rem;
-  padding-left: .7rem;
+  padding-left: 0.7rem;
   color: var(--admin-blue);
 }
-.admin-blue{
-  color:var(--admin-blue);
+.admin-blue {
+  color: var(--admin-blue);
   font-size: 1.8rem;
 }
-.admin-white{
+.admin-white {
   font-size: 1.2rem;
-  }
-.admin-header{
+}
+.admin-header {
   font-size: 1rem;
 }
 @keyframes showSideEdit {
@@ -1254,107 +1260,104 @@ footer {
   }
 }
 @media screen and (max-width: 1024px) {
-  #upper-dashboard{
+  #upper-dashboard {
     padding: 0;
-   max-width: 90%;
+    max-width: 90%;
     margin: 4% auto;
   }
-  .admin-view{
-    width:95%;
+  .admin-view {
+    width: 95%;
   }
-  admin-left i{
+  admin-left i {
     font-size: 2rem;
   }
-  .admin-left p{
+  .admin-left p {
     font-size: 1.3rem;
-    padding-left: .8rem;
-    
+    padding-left: 0.8rem;
   }
-  .admin-blue{
-    color:var(--admin-blue);
+  .admin-blue {
+    color: var(--admin-blue);
     font-size: 1.4rem;
   }
-  .admin-white{
+  .admin-white {
     font-size: 1.1rem;
-    }
-    .admin-left{
-      flex:.2;
-      border-right: 1px solid var(--font-color);
-      padding:1rem;
-    }
-    .admin-right{
-      flex:2;
-      text-align: center;
-      padding-top: 1rem;
-    }
+  }
+  .admin-left {
+    flex: 0.2;
+    border-right: 1px solid var(--font-color);
+    padding: 1rem;
+  }
+  .admin-right {
+    flex: 2;
+    text-align: center;
+    padding-top: 1rem;
+  }
 }
 @media screen and (max-width: 795px) {
-  #upper-dashboard{
+  #upper-dashboard {
     padding: 0;
-   max-width: 60%;
+    max-width: 60%;
     margin: 4% auto;
   }
- .admin-view{
-    width:100%;
+  .admin-view {
+    width: 100%;
   }
-    .admin-left{
-      flex:.2;
-      border-right: 1px solid var(--font-color);
-      padding:.8rem;
-    }
-    .admin-right{
-      flex:1;
-      text-align: center;
-      padding-top: 1
-    }
+  .admin-left {
+    flex: 0.2;
+    border-right: 1px solid var(--font-color);
+    padding: 0.8rem;
+  }
+  .admin-right {
+    flex: 1;
+    text-align: center;
+    padding-top: 1;
+  }
 }
 @media screen and (max-width: 490px) {
-  #upper-dashboard{
-    
+  #upper-dashboard {
     margin: 4% 4%;
   }
- .admin-view{
-    width:100%;
+  .admin-view {
+    width: 100%;
   }
-    .admin-left{
-      flex:.2;
-      border-right: 1px solid var(--font-color);
-      padding:.8rem;
-    }
-    .admin-right{
-      flex:1;
-      text-align: center;
-      padding-top: 1rem;
-    }
+  .admin-left {
+    flex: 0.2;
+    border-right: 1px solid var(--font-color);
+    padding: 0.8rem;
+  }
+  .admin-right {
+    flex: 1;
+    text-align: center;
+    padding-top: 1rem;
+  }
 }
 @media screen and (max-width: 365px) {
-  #upper-dashboard{
-    
+  #upper-dashboard {
     margin: 4% 1.5%;
   }
 }
 @media screen and (max-width: 320px) {
-  #upper-dashboard{
+  #upper-dashboard {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
+  }
 }
 /* create-blog */
-.upper-create{
-  height:46vh;
+.upper-create {
+  height: 46vh;
   max-width: 100%;
   text-align: center;
 }
-.upper-create h1{
-  padding-top:5%;
+.upper-create h1 {
+  padding-top: 5%;
 }
-.lower-create{
+.lower-create {
   background-color: var(--dark-blue);
   height: 46vh;
   max-width: 100%;
 }
-.crediblo{
+.crediblo {
   width: 80%;
   margin: auto;
   box-shadow: -3px -3px 30px var(--gray);
@@ -1363,19 +1366,19 @@ footer {
   position: relative;
   top: -60%;
 }
-#credi{
+#credi {
   overflow-y: hidden;
 }
-.create-form{
-  margin:1% 3%;
+.create-form {
+  margin: 1% 3%;
   padding: 1%;
 }
-.create-field input{
+.create-field input {
   border: 1px solid #adacac;
   width: 100%;
   font-size: 1rem;
 }
-#create-form  input{
+#create-form input {
   width: 100%;
 }
 .create-field textarea {
@@ -1383,93 +1386,89 @@ footer {
   width: 100%;
   font-size: 1rem;
 }
-.cblog-btn button{
-  font-size: .9rem;
-  padding: .5rem 2.5rem;
+.cblog-btn button {
+  font-size: 0.9rem;
+  padding: 0.5rem 2.5rem;
   margin: 1rem 40%;
   background: none;
 }
-.gray{
+.gray {
   color: var(--gray);
 }
 @media screen and (max-width: 1126px) {
-  .cblog-btn button{
-    padding: .5rem 2.5rem;
+  .cblog-btn button {
+    padding: 0.5rem 2.5rem;
     margin: 1rem 35%;
-    
   }
 }
 @media screen and (max-width: 1024px) {
-  .crediblo{
+  .crediblo {
     width: 90%;
   }
 }
 @media screen and (max-width: 776px) {
-  .upper-create h1{
-    padding-top:6%;
+  .upper-create h1 {
+    padding-top: 6%;
     font-size: 1.5rem;
   }
-  .crediblo{
+  .crediblo {
     width: 90%;
     top: -50%;
   }
-  create-field input{
-    font-size: .8rem;
+  create-field input {
+    font-size: 0.8rem;
     height: 1.5rem;
   }
   .create-field textarea {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-  .cblog-btn button{
-    font-size: .7rem;
-    padding: .5rem 2rem;
+  .cblog-btn button {
+    font-size: 0.7rem;
+    padding: 0.5rem 2rem;
     margin: 1rem 35%;
   }
-  .create-field h4{
-    font-size: .8rem;
+  .create-field h4 {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 682px) {
-  .crediblo{
+  .crediblo {
     width: 90%;
   }
 }
 @media screen and (max-width: 528px) {
-  .cblog-btn button{
-    padding: .5rem 1.5rem;
-   
+  .cblog-btn button {
+    padding: 0.5rem 1.5rem;
   }
 }
 @media screen and (max-width: 465px) {
-  .upper-create h1{
-    padding-top:3%;
+  .upper-create h1 {
+    padding-top: 3%;
     font-size: 1.5rem;
   }
-  .crediblo{
+  .crediblo {
     width: 95%;
   }
-  .cblog-btn button{
-    padding: .5rem .7rem;
-   
+  .cblog-btn button {
+    padding: 0.5rem 0.7rem;
   }
 }
 @media screen and (max-width: 414px) {
-  .upper-create h1{
-    padding-top:3%;
+  .upper-create h1 {
+    padding-top: 3%;
     font-size: 1.5rem;
   }
-  .crediblo{
-    top:-75%;
-}
+  .crediblo {
+    top: -75%;
+  }
 }
 @media screen and (max-width: 375px) {
-  .upper-create h1{
-    padding-top:8%;
-    
+  .upper-create h1 {
+    padding-top: 8%;
   }
-  .crediblo{
+  .crediblo {
     width: 97%;
-    top:-70%;
+    top: -70%;
   }
   .login-container {
     display: grid;
@@ -1477,78 +1476,77 @@ footer {
   }
 }
 @media screen and (max-width: 360px) {
-  .upper-create h1{
-    padding-top:2%;
+  .upper-create h1 {
+    padding-top: 2%;
   }
-  .crediblo{
-    top:-80%;
+  .crediblo {
+    top: -80%;
   }
-  .create-form{
-    margin:.5% 1.4%;
-    padding: .7%;
+  .create-form {
+    margin: 0.5% 1.4%;
+    padding: 0.7%;
   }
-  
-  create-field input{
-    font-size: .5rem;
+
+  create-field input {
+    font-size: 0.5rem;
     height: 1.3rem;
   }
-  .create-field h4{
-    font-size: .6rem;
+  .create-field h4 {
+    font-size: 0.6rem;
   }
 }
 @media screen and (max-width: 320px) {
   .login-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    
   }
-  .cblog-btn button{
-    padding: .5rem .7rem;
+  .cblog-btn button {
+    padding: 0.5rem 0.7rem;
     width: 40%;
     margin: 1rem 30%;
-   
   }
-  #credi{
+  #credi {
     overflow-y: scroll;
   }
 }
 /* edit-blog */
-.edit-delete{
-max-width: 1000px;
-margin: auto;
-display: flex;
-justify-content: space-around;
-margin-top:-2.3rem ;
-padding-bottom: 1rem;
+.edit-delete {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -2.3rem;
+  padding-bottom: 1rem;
 }
-.admin-links, .client-links{
+.admin-links,
+.client-links {
   display: none;
 }
-.edit-delete span{
-  padding:.5rem 1.5rem;
+.edit-delete span {
+  padding: 0.5rem 1.5rem;
 }
-#queries{
+#queries {
   min-height: 70vh;
 }
 
 @media screen and (max-width: 1024px) {
-  #queries{
+  #queries {
     min-height: 77vh;
   }
-  #queries-header{
+  #queries-header {
     font-size: 2rem;
   }
-  #queries-hr{
-    height: .2rem;
+  #queries-hr {
+    height: 0.2rem;
   }
 }
-.profile-picture{
+.profile-picture {
   /* height:1vh; */
   /* margin-bottom: 2rem; */
   max-width: 1000px;
   text-align: center;
 }
-.profile-picture img{
+.profile-picture img {
   border-radius: 12px;
   width: 35%;
 }

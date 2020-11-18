@@ -7,7 +7,7 @@ auth.onAuthStateChanged((user) => {
       providerData: [{ providerId: provider }],
     } = user;
     provider !== "password"
-      ? (location.href = "./admin")
+      ? (location.href = "../pages/blogs.html")
       : (location.href = "./pages");
   } else {
     console.log("no user.....");
@@ -34,12 +34,14 @@ adminLogin.addEventListener("submit", (e) => {
 });
 
 const authLogin = (client) => {
-  const providers = {
-    google: "GoogleAuthProvider",
-    github: "GithubAuthProvider",
-    facebook: "FacebookAuthProvider",
-  };
-  const provider = new firebase.auth[providers[client]]();
+  let provider;
+  if (client === "google") {
+    provider = new firebase.auth.GoogleAuthProvider();
+  } else if (client === "github") {
+    provider = new firebase.auth.GithubAuthProvider();
+  } else if (client === "facebook") {
+    provider = new firebase.auth.FacebookAuthProvider();
+  }
   firebase
     .auth()
     .signInWithPopup(provider)
