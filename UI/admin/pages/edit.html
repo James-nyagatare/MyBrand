@@ -29,7 +29,7 @@
      </li>
      <li>
         <div class="admin-pic">
-            <img src="../../images/blog.jpg" alt="">
+            <img src="../../images/blank-avatar.png" alt="">
         </div> 
      </li>
     </ul>
@@ -55,8 +55,8 @@
      <li>
         <a href="./editAdmin.html">Edit profile</a>
     </li>
-    <li>
-        <a href="">Logout</a>
+    <li >
+        <a href="" class="logout">Logout</a>
     </li>
  </ul>
 </div>
@@ -66,7 +66,7 @@
         <a href="./editAdmin.html">Edit</a>
     </li>
     <li>
-        <a href="">Logout</a>
+        <a href="" class="logout">Logout</a>
     </li>
 </ul>
 </div>
@@ -77,7 +77,7 @@
 <div class="lower-create">
     <div class="crediblo">
         <div class="create-form">
-            <form>
+            <form id="update-form">
                 <div class="input-field create-field" >
                     <h4>Title:</h4>
                     <input type="text" class="title-edit" placeholder="Blog title" />
@@ -91,7 +91,7 @@
 
                 <div class="input-field create-field">
                     <h4>Image:</h4>
-                    <input type="file"  placeholder="" class="gray" accept="image/x-png,image/x-jpeg" />
+                    <input type="file"  placeholder="" class="gray edit-image" accept="image/x-png,image/x-jpeg" />
                 </div>
 
                  <div class="cblog-btn" >
@@ -102,6 +102,15 @@
     </div>
 </div>
 <script src="../../js/index.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="../../js/firebaseInit.js"></script>
+<script src="../../js/formValidation.js"></script>
+<script src="../../js/firestore/updateBlog.js"></script>
+<script src="../../js/firestore/logout.js"></script>
+<script src="../../js//firestore/profile.js"></script>
 <script>
     
     CKEDITOR.replace( 'body');

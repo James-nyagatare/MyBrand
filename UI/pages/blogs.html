@@ -23,8 +23,11 @@
         <li>
             <a href="../pages/blogs.html">Blogs</a>
         </li>
-        <li>
+        <li class="logged-out">
             <a href="../admin/index.html">Login</a>
+        </li>
+        <li class="logged-in">
+            <a href="" class="logout">Logout</a>
         </li>
        </ul>
        <div class="burger">
@@ -42,34 +45,20 @@
         <li>
             <a href="../pages/blogs.html">Blogs</a>
         </li>
-        <li>
+        <li class="logged-out" id="logged-out">
             <a href="../admin/index.html">Login</a>
+        </li>
+        <li class="logged-in" id="logged-in">
+            <a href="" class="logout">Logout</a>
         </li>
     </ul>
    </div>
    
    <!-- blogs -->
-   <div class="all-blogs">
-   <h1>Blog Post</h1>
-   <h4>October 22, 2020 by Nyagatare James</h4>
-   <div class="blogs-image"><img src="../images/blog.jpg" alt=""></div>
-   <div class="clamp-text">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aut, repellat nulla vero nobis, fuga deserunt cum voluptas quaerat eius neque at ducimus non sed? Veniam dolorum eaque numquam sequi explicabo quo ipsa necessitatibus possimus deserunt. Animi recusandae cupiditate fugiat, nulla accusamus pariatur aliquid consequuntur amet tenetur qui laborum repellat tempora! Explicabo iste eveniet mollitia cupiditate. Dolore iure quos temporibus illum laudantium et nesciunt possimus, dignissimos fuga nostrum ipsa accusamus enim beatae reprehenderit, ullam pariatur totam tempora, quod recusandae odit. Doloribus quibusdam veritatis autem modi quasi eius assumenda possimus. Ea laborum reiciendis delectus consequatur saepe! Nulla eaque officia explicabo neque reiciendis dignissimos, temporibus enim delectus doloribus omnis. Sunt reprehenderit facilis fuga velit, nisi cumque, excepturi voluptatum, explicabo porro perspiciatis consectetur quisquam sint dolore est assumenda quos quibusdam facere maxime aut corporis nihil. Est omnis voluptates cupiditate praesentium minus modi molestias, quam blanditiis delectus beatae totam, nam ullam libero? Minus nemo architecto quam, iste ex fugit? Quis.
-   </div>
-   <div class="padding"><a href="./blog.html" button>Read more </a> </div>
-   <hr>
-   </div>
-   
-   <div class="all-blogs">
-    <h1>Blog Post</h1>
-    <h4>October 22, 2020 by Nyagatare James</h4>
-    <div class="blogs-image"><img src="../images/blog.jpg" alt=""></div>
-    <div class="clamp-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, officiis. Vero labore ipsa, voluptate dolor necessitatibus quo id vitae, optio pariatur sequi saepe nam. Itaque, libero, laudantium distinctio at modi tempora asperiores animi obcaecati optio, dolores quod ratione non provident. Dicta nisi debitis repellendus incidunt dolorum id vitae laudantium, atque, nostrum quibusdam ab illo iusto beatae quasi quia natus similique velit rerum tempore? Voluptates accusantium tempora nobis molestiae, voluptatibus recusandae commodi incidunt beatae inventore eligendi harum corporis a. Hic aut dolor, debitis, eligendi provident perferendis voluptate inventore blanditiis, animi veniam fuga distinctio exercitationem! Corrupti vero consequuntur adipisci atque quisquam voluptate ut quod veniam sed quam eaque laudantium debitis porro aspernatur fugiat beatae, repellendus assumenda minima tenetur. Magni animi, amet non culpa ipsa aperiam minima dolor nisi at possimus illo necessitatibus iusto quos similique blanditiis nam harum aut perferendis porro dolore, perspiciatis quod, itaque laboriosam ducimus? Maxime molestiae nesciunt veniam sed cum quas error sequi. Quas, maxime.
-    </div>
-    <div class="padding"><a href="./blog.html" button>Read more </a> </div>
-    <hr>
-    </div>
+   <section class="more-blogs">
+     
+   </section>
+  
    
     
     <!-- Footer -->
@@ -85,7 +74,14 @@
     </div>
               
     </footer>
-   
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="../js/firebaseInit.js"></script>
+    <script src="../js/firestore/getBlogs.js"></script>
+    <script src="../js/firestore/logout.js"></script>
+    <script src="../js/firestore/clientLinkController.js"></script>
    <script src="../js/index.js"></script>
 </body>
 </html>
