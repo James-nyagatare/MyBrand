@@ -1,5 +1,6 @@
 const Query = require("../models/queryModel");
 const Response = require("../helpers/response");
+
 class QueryController {
   static async getQueries(req, res) {
     try {
@@ -9,6 +10,7 @@ class QueryController {
       Response.error(res, 500, err.message);
     }
   }
+
   static async createQueries(req, res) {
     try {
       const query = await Query.create({

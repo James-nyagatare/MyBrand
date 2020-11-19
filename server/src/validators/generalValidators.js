@@ -1,5 +1,6 @@
 const Joi = require("joi");
 const Response = require("../helpers/response");
+
 class GeneralValidator {
   static queryValidator(req, res, next) {
     const schema = Joi.object({
