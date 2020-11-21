@@ -9,7 +9,12 @@ class GeneralValidator {
       message: Joi.string().min(10).required(),
     });
     const { error } = schema.validate(req.body);
-    if (error) return Response.error(res, 400, error.details[0].message);
+    if (error)
+      return Response.error(
+        res,
+        400,
+        error.details[0].message.replace(/\"/g, "")
+      );
     next();
   }
   static blogValidator(req, res, next) {
@@ -18,7 +23,27 @@ class GeneralValidator {
       content: Joi.string().min(10).required(),
     });
     const { error } = schema.validate(req.body);
-    if (error) return Response.error(res, 400, error.details[0].message);
+    if (error)
+      return Response.error(
+        res,
+        400,
+        error.details[0].message.replace(/\"/g, "")
+      );
+    next();
+  }
+
+  static updateValidator(req, res, next) {
+    const schema = Joi.object({
+      title: Joi.string().min(5).max(25),
+      content: Joi.string().min(10),
+    });
+    const { error } = schema.validate(req.body);
+    if (error)
+      return Response.error(
+        res,
+        400,
+        error.details[0].message.replace(/\"/g, "")
+      );
     next();
   }
 }

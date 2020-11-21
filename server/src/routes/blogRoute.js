@@ -13,12 +13,7 @@ router.post(
   GeneralValidator.blogValidator,
   BlogController.createBlog
 );
-router.put(
-  "/:id",
-  upload.single("blogImage"),
-  GeneralValidator.blogValidator,
-  BlogController.updateBlog
-);
+router.put("/:id", GeneralValidator.updateValidator, BlogController.updateBlog);
 
 router.delete("/:id", BlogController.deleteBlog);
 

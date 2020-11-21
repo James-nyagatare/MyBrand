@@ -1,6 +1,7 @@
 class Response {
-  static success(res, status, data) {
+  static success(res, status, message, data) {
     res.status(status).json({
+      message,
       data,
     });
   }
