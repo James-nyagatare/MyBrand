@@ -1,4 +1,5 @@
 const Blog = require("../models/blogModel");
+const Comment = require("../models/commentModel");
 const Response = require("../helpers/response");
 const uploadToCloud = require("../config/cloudinary");
 
@@ -73,6 +74,40 @@ class BlogController {
     } catch (error) {
       return Response.error(res, 404, "Blog not found");
     }
+  }
+
+  static async addComment(req, res) {
+    const blogId = req.params.id;
+    if (!blogId) return Response.error(res, 400, "Please provide the blogId");
+    const blog = await Blog.findById(blogId);
+    if (!blog) return Response.success(res, 404, "Blog Not Found");
+    try {
+      const newComment = new Comment({ comment: req.body.comment });
+      await newComment.save();
+      blog.comments.push(newComment);
+      blog.commentCounts += 1;
+      await blog.save();
+      return Response.success(
+        res,
+        201,
+        "Comment sucessfully Created",
+        newComment
+      );
+    } catch (error) {
+      return Response.error(res, 500, "something went wrong");
+    }
+  }
+
+  static async addLike(req, res) {
+    const blogId = req.params.id;
+    if (!blogId) return Response.error(res, 400, "Please provide the blogId");
+    const blog = await Blog.findById(blogId);
+    if (!blog) return Response.error(res, 404, "Blog Not Found");
+    blog.likes += 1;
+    try {
+      await blog.save();
+      return Response.success(res, 200, "Sucessfully Liked The Blog");
+    } catch (error) {}
   }
 }
 

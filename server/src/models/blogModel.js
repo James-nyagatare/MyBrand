@@ -1,9 +1,17 @@
 const mongoose = require("mongoose");
 
 const blogSchema = mongoose.Schema({
-  title: { type: String, unique: true },
-  content: { type: String, unique: true },
-  blogImage: { type: String },
+  title: { type: String, required: true, unique: true },
+  content: { type: String, required: true, unique: true },
+  blogImage: { type: String, required: true },
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
+  commentCounts: { type: Number, default: 0 },
+  likes: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now },
 });
 

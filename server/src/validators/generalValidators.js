@@ -46,6 +46,20 @@ class GeneralValidator {
       );
     next();
   }
+
+  static commentValidator(req, res, next) {
+    const schema = Joi.object({
+      comment: Joi.string().trim().min(5).required(),
+    });
+    const { error } = schema.validate(req.body);
+    if (error)
+      return Response.error(
+        res,
+        400,
+        error.details[0].message.replace(/\"/g, "")
+      );
+    next();
+  }
 }
 
 module.exports = GeneralValidator;

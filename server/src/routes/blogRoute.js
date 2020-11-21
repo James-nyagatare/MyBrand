@@ -17,4 +17,6 @@ router.put("/:id", GeneralValidator.updateValidator, BlogController.updateBlog);
 
 router.delete("/:id", BlogController.deleteBlog);
 
+router.patch("/:id/like", BlogController.addLike);
+
 module.exports = router;
