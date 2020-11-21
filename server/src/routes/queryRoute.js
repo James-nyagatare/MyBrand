@@ -4,9 +4,9 @@ const GeneralValidator = require("../validators/generalValidators");
 
 const router = express.Router();
 
-router.get("/queries", QueryController.getQueries);
+router.get("/", QueryController.getQueries);
 router.post(
-  "/queries",
+  "/",
   GeneralValidator.queryValidator,
   QueryController.createQueries
 );
