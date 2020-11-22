@@ -2,6 +2,7 @@ const { Router } = require("express");
 const GeneralValidator = require("../validators/generalValidators");
 const BlogController = require("../controllers/blogController");
 const upload = require("../config/multer");
+const dbValidator = require("../validators/dbValidator");
 
 const router = Router();
 
@@ -17,6 +18,6 @@ router.put("/:id", GeneralValidator.updateValidator, BlogController.updateBlog);
 
 router.delete("/:id", BlogController.deleteBlog);
 
-router.patch("/:id/like", BlogController.addLike);
+router.patch("/:id/like", dbValidator, BlogController.addLike);
 
 module.exports = router;

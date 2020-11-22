@@ -79,10 +79,6 @@ class BlogController {
   }
 
   static async addComment(req, res) {
-    const blogId = req.params.id;
-    if (!blogId) return Response.error(res, 400, "Please provide the blogId");
-    const blog = await Blog.findById(blogId);
-    if (!blog) return Response.success(res, 404, "Blog Not Found");
     try {
       const newComment = new Comment({ comment: req.body.comment });
       await newComment.save();
@@ -101,15 +97,13 @@ class BlogController {
   }
 
   static async addLike(req, res) {
-    const blogId = req.params.id;
-    if (!blogId) return Response.error(res, 400, "Please provide the blogId");
-    const blog = await Blog.findById(blogId);
-    if (!blog) return Response.error(res, 404, "Blog Not Found");
     blog.likes += 1;
     try {
       await blog.save();
       return Response.success(res, 200, "Sucessfully Liked The Blog");
-    } catch (error) {}
+    } catch (error) {
+      return Response.error(res, 500, "Something Went Wrong");
+    }
   }
 }
 

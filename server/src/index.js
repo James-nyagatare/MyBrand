@@ -22,6 +22,13 @@ app.use("/uploads", express.static("uploads"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/api/v1", routes);
+app.use("/api/queries", queryRoutes);
+app.use("/api/blogs", blogRoutes);
+app.use("/api/comments", commentRoutes);
+
+app.use("*", (req, res) => {
+  res.status(404).send("Route Not Found");
+});
 
 const port = 3000;
 app.listen(port, console.log(`Listening on port ${port}...`));
