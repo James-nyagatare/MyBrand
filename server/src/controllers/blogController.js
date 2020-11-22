@@ -32,7 +32,9 @@ class BlogController {
 
   static async getBlog(req, res) {
     try {
-      const blog = await Blog.findOne({ _id: req.params.id });
+      const blog = await Blog.findOne({ _id: req.params.id }).populate(
+        "comments"
+      );
       if (blog === null) return Response.error(res, 404, "Blog not found");
       return Response.success(res, 200, "Sucessfully Retrieved the blog", blog);
     } catch (err) {
