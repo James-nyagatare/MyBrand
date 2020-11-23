@@ -1,6 +1,5 @@
 const Joi = require("joi");
 const joiResponse = require("../helpers/joiresponse");
-const Response = require("../helpers/response");
 
 class GeneralValidator {
   static queryValidator(req, res, next) {
