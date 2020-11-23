@@ -1,6 +1,8 @@
 const Blog = require("../models/blogModel");
+const Comment = require("../models/commentModel");
 const Response = require("../helpers/response");
 const uploadToCloud = require("../config/cloudinary");
+const DbValidator = require("../helpers/dbvalidator");
 
 class BlogController {
   static async getBlogs(req, res) {
@@ -31,11 +33,13 @@ class BlogController {
 
   static async getBlog(req, res) {
     try {
-      const blog = await Blog.findOne({ _id: req.params.id });
-      if (blog === null) return Response.error(res, 404, "Blog not found");
+      const blog = await Blog.findOne({ _id: req.params.id }).populate(
+        "comments"
+      );
+      if (!blog) return Response.error(res, 404, "Blog not found");
       return Response.success(res, 200, "Sucessfully Retrieved the blog", blog);
     } catch (err) {
-      Response.error(res, 404, "Blog not found");
+      Response.error(res, 500, "Something Went Wrong");
     }
   }
 
@@ -54,7 +58,8 @@ class BlogController {
         blogUpdated
       );
     } catch (error) {
-      console.log(error);
+      if (error.code === 11000)
+        return Response.error(res, 400, "Duplicate value entered");
       return Response.error(res, 500, "Blog not updated!");
     }
   }
@@ -72,6 +77,37 @@ class BlogController {
       );
     } catch (error) {
       return Response.error(res, 404, "Blog not found");
+    }
+  }
+
+  static async addComment(req, res) {
+    try {
+      const blog = await DbValidator.findById(req, res);
+      const newComment = new Comment({ comment: req.body.comment });
+      await newComment.save();
+      blog.comments.push(newComment);
+      blog.commentCounts += 1;
+      await blog.save();
+      return Response.success(
+        res,
+        201,
+        "Comment sucessfully Created",
+        newComment
+      );
+    } catch (error) {
+      console.log(error);
+      return Response.error(res, 500, error);
+    }
+  }
+
+  static async addLike(req, res) {
+    try {
+      const blog = await DbValidator.findById(req, res);
+      blog.likes += 1;
+      await blog.save();
+      return Response.success(res, 200, "Sucessfully Liked The Blog");
+    } catch (error) {
+      return Response.error(res, 500, "Something Went Wrong");
     }
   }
 }
