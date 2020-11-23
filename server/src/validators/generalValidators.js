@@ -1,4 +1,5 @@
 const Joi = require("joi");
+const joiResponse = require("../helpers/joiresponse");
 const Response = require("../helpers/response");
 
 class GeneralValidator {
@@ -8,28 +9,14 @@ class GeneralValidator {
       email: Joi.string().email().required(),
       message: Joi.string().min(10).required(),
     });
-    const { error } = schema.validate(req.body);
-    if (error)
-      return Response.error(
-        res,
-        400,
-        error.details[0].message.replace(/\"/g, "")
-      );
-    next();
+    joiResponse(req, res, schema, next);
   }
   static blogValidator(req, res, next) {
     const schema = Joi.object({
       title: Joi.string().min(5).max(25).required(),
       content: Joi.string().min(10).required(),
     });
-    const { error } = schema.validate(req.body);
-    if (error)
-      return Response.error(
-        res,
-        400,
-        error.details[0].message.replace(/\"/g, "")
-      );
-    next();
+    joiResponse(req, res, schema, next);
   }
 
   static updateValidator(req, res, next) {
@@ -37,28 +24,14 @@ class GeneralValidator {
       title: Joi.string().min(5).max(25),
       content: Joi.string().min(10),
     });
-    const { error } = schema.validate(req.body);
-    if (error)
-      return Response.error(
-        res,
-        400,
-        error.details[0].message.replace(/\"/g, "")
-      );
-    next();
+    joiResponse(req, res, schema, next);
   }
 
   static commentValidator(req, res, next) {
     const schema = Joi.object({
       comment: Joi.string().trim().min(5).required(),
     });
-    const { error } = schema.validate(req.body);
-    if (error)
-      return Response.error(
-        res,
-        400,
-        error.details[0].message.replace(/\"/g, "")
-      );
-    next();
+    joiResponse(req, res, schema, next);
   }
 }
 
