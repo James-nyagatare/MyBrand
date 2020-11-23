@@ -5,7 +5,7 @@ class QueryController {
   static async getQueries(req, res) {
     try {
       const queries = await Query.find();
-      Response.success(res, 200, queries);
+      Response.success(res, 200, "Sucessfully retrieved queries", queries);
     } catch (err) {
       Response.error(res, 500, err.message);
     }
@@ -18,7 +18,7 @@ class QueryController {
         email: req.body.email,
         message: req.body.message,
       });
-      Response.success(res, 201, query);
+      Response.success(res, 201, "Sucessfully Created query", query);
     } catch (err) {
       Response.error(res, 500, err.message);
     }
