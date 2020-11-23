@@ -1,9 +1,9 @@
-const express = require("express");
+const { Router } = require("express");
 const GeneralValidator = require("../validators/generalValidators");
 const BlogController = require("../controllers/blogController");
 const upload = require("../config/multer");
 
-const router = express.Router();
+const router = Router();
 
 router.get("/", BlogController.getBlogs);
 router.get("/:id", BlogController.getBlog);

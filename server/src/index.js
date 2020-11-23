@@ -1,10 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const queryRoutes = require("./routes/queryRoute");
-const blogRoutes = require("./routes/blogRoute");
-
 const morgan = require("morgan");
 const app = express();
+
+const routes = require("./routes");
 
 mongoose
   .connect("mongodb://localhost/my-brand", {
@@ -22,7 +21,7 @@ app.use(morgan("dev"));
 app.use("/uploads", express.static("uploads"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use("/api/queries", queryRoutes);
-app.use("/api/blogs", blogRoutes);
+app.use("/api/v1", routes);
+
 const port = 3000;
 app.listen(port, console.log(`Listening on port ${port}...`));
