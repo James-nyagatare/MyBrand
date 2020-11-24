@@ -1,10 +1,11 @@
 const { Router } = require("express");
 const QueryController = require("../controllers/queryController");
+const { adminAuth } = require("../middlewares/auth");
 const GeneralValidator = require("../validators/generalValidators");
 
 const router = Router();
 
-router.get("/", QueryController.getQueries);
+router.get("/", adminAuth, QueryController.getQueries);
 router.post(
   "/",
   GeneralValidator.queryValidator,

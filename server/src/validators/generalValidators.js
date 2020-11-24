@@ -32,6 +32,23 @@ class GeneralValidator {
     });
     joiResponse(req, res, schema, next);
   }
+
+  static userRegisterValidator(req, res, next) {
+    const schema = Joi.object({
+      name: Joi.string().trim().min(3).max(50).required(),
+      email: Joi.string().email().required(),
+      password: Joi.string().min(6).required(),
+    });
+    joiResponse(req, res, schema, next);
+  }
+
+  static userLoginValidator(req, res, next) {
+    const schema = Joi.object({
+      email: Joi.string().email().required(),
+      password: Joi.string().min(6).required(),
+    });
+    joiResponse(req, res, schema, next);
+  }
 }
 
 module.exports = GeneralValidator;

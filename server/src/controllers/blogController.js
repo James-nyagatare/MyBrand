@@ -22,6 +22,7 @@ class BlogController {
         title: req.body.title,
         content: req.body.content,
         blogImage: img.url,
+        authorName: req.user.name,
       });
       Response.success(res, 201, "Sucessfully Created the blog", blog);
     } catch (err) {

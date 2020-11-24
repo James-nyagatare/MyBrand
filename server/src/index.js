@@ -1,9 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
-const app = express();
-
 const routes = require("./routes");
+
+const app = express();
 
 mongoose
   .connect("mongodb://localhost/my-brand", {
