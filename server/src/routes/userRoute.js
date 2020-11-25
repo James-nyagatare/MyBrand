@@ -1,10 +1,8 @@
-const passport = require("passport");
-const { Router } = require("express");
-const GeneralValidator = require("../validators/generalValidators");
-const UserController = require("../controllers/userController");
-const upload = require("../config/multer");
-const { adminAuth } = require("../middlewares/auth");
-const Response = require("../helpers/response");
+import { Router } from "express";
+import { GeneralValidator } from "../validators/generalValidators";
+import { UserController } from "../controllers/userController";
+import { upload } from "../config/multer";
+import { AuthMiddleware } from "../middlewares/auth";
 
 const router = Router();
 
@@ -21,9 +19,9 @@ router.post(
 
 router.put(
   "/updateProfile/:id",
-  adminAuth,
+  AuthMiddleware.adminAuth,
   upload.single("profileImage"),
   UserController.updateProfilePicture
 );
 
-module.exports = router;
+export default router;

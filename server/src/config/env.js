@@ -1,12 +1,10 @@
-const { config } = require("dotenv");
+import { config } from "dotenv";
 
 config();
 
-module.exports = {
-  CLOUDINARY_NAME: process.env.CLOUDINARY_NAME,
-  CLOUDINARY_KEY: process.env.CLOUDINARY_KEY,
-  CLOUDINARY_SECRET: process.env.CLOUDINARY_SECRET,
-  JWT_KEY: process.env.JWT_KEY,
-  GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
-  GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
-};
+export const CLOUDINARY_NAME = process.env.CLOUDINARY_NAME;
+export const CLOUDINARY_KEY = process.env.CLOUDINARY_KEY;
+export const CLOUDINARY_SECRET = process.env.CLOUDINARY_SECRET;
+export const JWT_KEY = process.env.JWT_KEY;
+export const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+export const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;

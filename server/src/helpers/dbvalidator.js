@@ -1,8 +1,8 @@
-const Response = require("./response");
-const Blog = require("../models/blogModel");
-const User = require("../models/userModel");
+import { Response } from "./response";
+import Blog from "../models/blogModel";
+import User from "../models/userModel";
 
-class DbValidator {
+export class DbValidator {
   static async findById(req, res) {
     try {
       const result = await Blog.findById(req.params.id);
@@ -21,5 +21,3 @@ class DbValidator {
     }
   }
 }
-
-module.exports = DbValidator;

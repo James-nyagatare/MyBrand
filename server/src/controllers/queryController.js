@@ -1,7 +1,7 @@
-const Query = require("../models/queryModel");
-const Response = require("../helpers/response");
+import Query from "../models/queryModel";
+import { Response } from "../helpers/response";
 
-class QueryController {
+export class QueryController {
   static async getQueries(req, res) {
     try {
       const queries = await Query.find();
@@ -24,5 +24,3 @@ class QueryController {
     }
   }
 }
-
-module.exports = QueryController;

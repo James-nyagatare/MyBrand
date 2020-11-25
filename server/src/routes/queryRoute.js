@@ -1,15 +1,15 @@
-const { Router } = require("express");
-const QueryController = require("../controllers/queryController");
-const { adminAuth } = require("../middlewares/auth");
-const GeneralValidator = require("../validators/generalValidators");
+import { Router } from "express";
+import { QueryController } from "../controllers/queryController";
+import { AuthMiddleware } from "../middlewares/auth";
+import { GeneralValidator } from "../validators/generalValidators";
 
 const router = Router();
 
-router.get("/", adminAuth, QueryController.getQueries);
+router.get("/", AuthMiddleware.adminAuth, QueryController.getQueries);
 router.post(
   "/",
   GeneralValidator.queryValidator,
   QueryController.createQueries
 );
 
-module.exports = router;
+export default router;

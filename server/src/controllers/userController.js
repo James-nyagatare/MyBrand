@@ -1,22 +1,20 @@
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const DbValidator = require("../helpers/dbvalidator");
-const Response = require("../helpers/response");
-const User = require("../models/userModel");
-const env = require("../config/env");
-const uploadToCloud = require("../config/cloudinary");
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import { DbValidator } from "../helpers/dbvalidator";
+import { Response } from "../helpers/response";
+import User from "../models/userModel";
+import { JWT_KEY } from "../config/env";
+import { uploadToCloud } from "../config/cloudinary";
 
-class UserController {
+export class UserController {
   static async registerUser(req, res) {
     try {
       const checkUser = await DbValidator.findOne(req, res);
       if (checkUser) return Response.error(res, 409, "User already registered");
       const salt = await bcrypt.genSalt(10);
-      const password = await bcrypt.hash(req.body.password, salt);
-      const { _id, name, email } = await User.create({
-        ...req.body,
-        password,
-      });
+      const hashedPassword = await bcrypt.hash(req.body.password, salt);
+      req.body.password = hashedPassword;
+      const { _id, name, email } = await User.create(req.body);
       return Response.success(res, 201, "User sucessfully created", {
         _id,
         name,
@@ -39,7 +37,7 @@ class UserController {
       if (!validPassword)
         return Response.error(res, 401, "Invalid email or password");
       const { _id, name, email } = user;
-      const token = jwt.sign({ _id, name, email }, env.JWT_KEY);
+      const token = jwt.sign({ _id, name, email }, JWT_KEY);
       return Response.success(res, 200, "sucessfully logged in", token);
     } catch (error) {
       Response.error(res, 500, "Something went wrong");
@@ -63,5 +61,3 @@ class UserController {
     }
   }
 }
-
-module.exports = UserController;

@@ -1,6 +1,6 @@
-const express = require("express");
-const BlogController = require("../controllers/blogController");
-const GeneralValidator = require("../validators/generalValidators");
+import express from "express";
+import { BlogController } from "../controllers/blogController";
+import { GeneralValidator } from "../validators/generalValidators";
 
 const router = express.Router();
 
@@ -10,4 +10,4 @@ router.post(
   BlogController.addComment
 );
 
-module.exports = router;
+export default router;

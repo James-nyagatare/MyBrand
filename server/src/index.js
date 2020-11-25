@@ -1,7 +1,7 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const morgan = require("morgan");
-const routes = require("./routes");
+import express from "express";
+import mongoose from "mongoose";
+import morgan from "morgan";
+import routes from "./routes";
 
 const app = express();
 

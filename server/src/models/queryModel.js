@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const querySchema = mongoose.Schema({
   name: { type: String, required: true },
@@ -6,4 +6,4 @@ const querySchema = mongoose.Schema({
   message: { type: String, required: true },
 });
 
-module.exports = mongoose.model("Query", querySchema);
+export default mongoose.model("Query", querySchema);

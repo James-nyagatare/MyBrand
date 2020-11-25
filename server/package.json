@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/index",
-    "dev": "nodemon ./src/index"
+    "dev": "nodemon --exec babel-node ./src/index"
   },
   "author": "Nyagatare James",
   "license": "ISC",
@@ -24,6 +24,11 @@
     "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/register": "^7.12.1",
     "nodemon": "^2.0.6"
   }
 }
