@@ -1,10 +1,10 @@
-const Blog = require("../models/blogModel");
-const Comment = require("../models/commentModel");
-const Response = require("../helpers/response");
-const uploadToCloud = require("../config/cloudinary");
-const DbValidator = require("../helpers/dbvalidator");
+import Blog from "../models/blogModel";
+import Comment from "../models/commentModel";
+import { Response } from "../helpers/response";
+import { uploadToCloud } from "../config/cloudinary";
+import { DbValidator } from "../helpers/dbvalidator";
 
-class BlogController {
+export class BlogController {
   static async getBlogs(req, res) {
     try {
       const blogs = await Blog.find();
@@ -22,6 +22,7 @@ class BlogController {
         title: req.body.title,
         content: req.body.content,
         blogImage: img.url,
+        authorName: req.user.name,
       });
       Response.success(res, 201, "Sucessfully Created the blog", blog);
     } catch (err) {
@@ -111,5 +112,3 @@ class BlogController {
     }
   }
 }
-
-module.exports = BlogController;

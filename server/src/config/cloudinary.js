@@ -1,14 +1,14 @@
-const { v2: cloudinary } = require("cloudinary");
-const Response = require("../helpers/response");
-const env = require("./env");
+import { v2 as cloudinary } from "cloudinary";
+import { Response } from "../helpers/response";
+import { CLOUDINARY_NAME, CLOUDINARY_KEY, CLOUDINARY_SECRET } from "./env";
 
 cloudinary.config({
-  cloud_name: env.CLOUDINARY_NAME,
-  api_key: env.CLOUDINARY_KEY,
-  api_secret: env.CLOUDINARY_SECRET,
+  cloud_name: CLOUDINARY_NAME,
+  api_key: CLOUDINARY_KEY,
+  api_secret: CLOUDINARY_SECRET,
 });
 
-const uploadToCloud = async (file, res) => {
+export const uploadToCloud = async (file, res) => {
   try {
     const image = await cloudinary.uploader.upload(file.path, {
       folder: "MyBrand",
@@ -19,5 +19,3 @@ const uploadToCloud = async (file, res) => {
     return Response.error(res, 500, error);
   }
 };
-
-module.exports = uploadToCloud;

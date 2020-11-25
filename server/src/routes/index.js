@@ -1,12 +1,14 @@
-const { Router } = require("express");
+import { Router } from "express";
 
-const queryRoutes = require("./queryRoute");
-const blogRoutes = require("./blogRoute");
-const commentRoutes = require("./commentRoute");
+import queryRoutes from "./queryRoute";
+import blogRoutes from "./blogRoute";
+import commentRoutes from "./commentRoute";
+import userRoutes from "./userRoute";
 
 const routes = Router();
 routes.use("/queries", queryRoutes);
 routes.use("/blogs", blogRoutes);
 routes.use("/comments", commentRoutes);
+routes.use("/users", userRoutes);
 
-module.exports = routes;
+export default routes;

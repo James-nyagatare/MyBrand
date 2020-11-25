@@ -1,7 +1,7 @@
-const Joi = require("joi");
-const joiResponse = require("../helpers/joiresponse");
+import Joi from "joi";
+import { joiResponse } from "../helpers/joiresponse";
 
-class GeneralValidator {
+export class GeneralValidator {
   static queryValidator(req, res, next) {
     const schema = Joi.object({
       name: Joi.string().min(3).max(45).required(),
@@ -32,6 +32,21 @@ class GeneralValidator {
     });
     joiResponse(req, res, schema, next);
   }
-}
 
-module.exports = GeneralValidator;
+  static userRegisterValidator(req, res, next) {
+    const schema = Joi.object({
+      name: Joi.string().trim().min(3).max(50).required(),
+      email: Joi.string().email().required(),
+      password: Joi.string().min(6).required(),
+    });
+    joiResponse(req, res, schema, next);
+  }
+
+  static userLoginValidator(req, res, next) {
+    const schema = Joi.object({
+      email: Joi.string().email().required(),
+      password: Joi.string().min(6).required(),
+    });
+    joiResponse(req, res, schema, next);
+  }
+}

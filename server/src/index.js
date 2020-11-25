@@ -1,9 +1,9 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const morgan = require("morgan");
-const app = express();
+import express from "express";
+import mongoose from "mongoose";
+import morgan from "morgan";
+import routes from "./routes";
 
-const routes = require("./routes");
+const app = express();
 
 mongoose
   .connect("mongodb://localhost/my-brand", {

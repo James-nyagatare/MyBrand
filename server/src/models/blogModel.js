@@ -1,9 +1,10 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const blogSchema = mongoose.Schema({
   title: { type: String, required: true, unique: true },
   content: { type: String, required: true, unique: true },
   blogImage: { type: String, required: true },
+  authorName: { type: String },
   comments: [
     {
       type: mongoose.Schema.Types.ObjectId,
@@ -15,4 +16,4 @@ const blogSchema = mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("Blog", blogSchema);
+export default mongoose.model("Blog", blogSchema);
