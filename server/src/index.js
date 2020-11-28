@@ -1,12 +1,14 @@
+import "@babel/polyfill";
 import express from "express";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import routes from "./routes";
+import { DATABASE_TEST, DATABASE_URL, NODE_ENV, PORT } from "./config/env";
 
 const app = express();
 
 mongoose
-  .connect("mongodb://localhost/my-brand", {
+  .connect(DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -14,8 +16,7 @@ mongoose
   })
   .then(() => {
     console.log("mongodb connected...");
-  })
-  .catch((err) => console.log("something went wrong", err.message));
+  });
 
 app.use(morgan("dev"));
 app.use("/uploads", express.static("uploads"));
@@ -24,8 +25,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/api/v1", routes);
 
 app.use("*", (req, res) => {
-  res.status(404).send("Route Not Found");
+  res.status(404).json({ message: "Route Not Found" });
 });
 
-const port = 3000;
+const port = PORT;
 app.listen(port, console.log(`Listening on port ${port}...`));
+
+export default app;

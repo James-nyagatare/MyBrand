@@ -21,7 +21,6 @@ export class UserController {
         email,
       });
     } catch (err) {
-      console.log(err);
       return Response.error(res, 500, "Something went Wrong");
     }
   }
@@ -40,13 +39,14 @@ export class UserController {
       const token = jwt.sign({ _id, name, email }, JWT_KEY);
       return Response.success(res, 200, "sucessfully logged in", token);
     } catch (error) {
-      Response.error(res, 500, "Something went wrong");
+      return Response.error(res, 500, "Something went wrong");
     }
   }
 
   static async updateProfilePicture(req, res) {
     try {
-      if (!req.file) return Response.error(res, 400, "Blog image is required");
+      if (!req.file)
+        return Response.error(res, 400, "Profile image is required");
       if (req.params.id !== req.user._id)
         return Response.error(res, 403, "Access Denied!");
       const img = await uploadToCloud(req.file, res);
@@ -56,7 +56,6 @@ export class UserController {
       user.save();
       return Response.success(res, 200, user);
     } catch (error) {
-      console.log(error);
       return Response.error(res, 500, "Something went wrong");
     }
   }
