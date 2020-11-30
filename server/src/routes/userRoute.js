@@ -17,7 +17,7 @@ router.post(
   UserController.loginUser
 );
 
-router.put(
+router.patch(
   "/updateProfile/:id",
   AuthMiddleware.adminAuth,
   upload.single("profileImage"),

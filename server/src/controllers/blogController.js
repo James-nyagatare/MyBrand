@@ -10,7 +10,7 @@ export class BlogController {
       const blogs = await Blog.find();
       Response.success(res, 200, "Sucessfully retrieved all blogs", blogs);
     } catch (err) {
-      Response.error(res, 500, err);
+      return Response.error(res, 500, err);
     }
   }
 
@@ -28,7 +28,7 @@ export class BlogController {
     } catch (err) {
       if (err.code === 11000)
         return Response.error(res, 400, "Duplicate field value entered");
-      Response.error(res, 500, err);
+      return Response.error(res, 500, err);
     }
   }
 
@@ -40,7 +40,7 @@ export class BlogController {
       if (!blog) return Response.error(res, 404, "Blog not found");
       return Response.success(res, 200, "Sucessfully Retrieved the blog", blog);
     } catch (err) {
-      Response.error(res, 500, "Something Went Wrong");
+      return Response.error(res, 500, "Something Went Wrong");
     }
   }
 
@@ -96,7 +96,6 @@ export class BlogController {
         newComment
       );
     } catch (error) {
-      console.log(error);
       return Response.error(res, 500, error);
     }
   }

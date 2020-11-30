@@ -7,7 +7,7 @@ export class QueryController {
       const queries = await Query.find();
       Response.success(res, 200, "Sucessfully retrieved queries", queries);
     } catch (err) {
-      Response.error(res, 500, err.message);
+      return Response.error(res, 500, err.message);
     }
   }
 
@@ -20,7 +20,7 @@ export class QueryController {
       });
       Response.success(res, 201, "Sucessfully Created query", query);
     } catch (err) {
-      Response.error(res, 500, err.message);
+      return Response.error(res, 500, err.message);
     }
   }
 }
