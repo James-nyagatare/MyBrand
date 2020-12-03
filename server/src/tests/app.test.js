@@ -19,4 +19,9 @@ describe("App test:", () => {
     expect(res.body).to.be.a("object");
     expect(res.body).to.have.property("message");
   });
+
+  it("should display a swaggerUi", async () => {
+    const res = await chai.request(app).get("/api-docs");
+    expect(res.status).to.be.equal(200);
+  });
 });
